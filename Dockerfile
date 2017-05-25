@@ -1,8 +1,10 @@
 FROM debian:jessie-slim
+ENV HOME /root
 ENV UTIL_PACKAGES="vim curl wget git less tar"
 ENV PACKAGE_ADDR="https://storage.googleapis.com/golang/"
 ENV PACKAGE_NAME="go1.8.3.linux-amd64.tar.gz"
-ENV PATH=/root/go/bin:/usr/local/go/bin:$PATH
+ENV GOPATH=/usr/workspace
+ENV PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 
 RUN apt-get -y update && apt-get install -y $UTIL_PACKAGES && \
     apt-get clean
@@ -16,10 +18,6 @@ RUN wget -q $PACKAGE_ADDR$PACKAGE_NAME && \
 # Add files.
 ADD root/.vimrc /root/.vimrc
 ADD root/.bashrc /root/.bashrc
-
-# Set environment variables.
-ENV HOME /usr
-ENV GOPATH /usr/workspace
 
 # Define working directory.
 WORKDIR /usr/workspace
