@@ -3,7 +3,7 @@ ENV HOME /root
 ENV UTIL_PACKAGES="vim curl wget git less tar"
 ENV PACKAGE_ADDR="https://storage.googleapis.com/golang/"
 ENV PACKAGE_NAME="go1.8.3.linux-amd64.tar.gz"
-ENV GOPATH=/usr/workspace
+ENV GOPATH /usr/workspace
 ENV PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 
 RUN apt-get -y update && apt-get install -y $UTIL_PACKAGES && \
