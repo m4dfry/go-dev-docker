@@ -18,7 +18,7 @@ ADD root/.vimrc /root/.vimrc
 ADD root/.bashrc /root/.bashrc
 
 # Set environment variables.
-ENV HOME /usr
+ENV HOME /root
 ENV GOPATH /usr/workspace
 
 # Define working directory.
