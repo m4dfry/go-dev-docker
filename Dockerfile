@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM debian:stretch-slim
 ENV HOME /root
 ENV UTIL_PACKAGES="vim curl wget git less tar"
 ENV PACKAGE_ADDR="https://storage.googleapis.com/golang/"
