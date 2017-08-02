@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 ENV HOME /root
-ENV UTIL_PACKAGES="vim curl wget git less tar"
+ENV UTIL_PACKAGES="vim curl wget git less tar entr"
 ENV PACKAGE_ADDR="https://storage.googleapis.com/golang/"
 ENV PACKAGE_NAME="go1.8.3.linux-amd64.tar.gz"
 ENV GOPATH /usr/workspace
